@@ -1,0 +1,168 @@
+/* Gaya Umum */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: #f1f1f1;
+}
+
+/* Latar Belakang */
+.background {
+    background: url('foto background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Overlay untuk efek transparansi */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Gelap transparan */
+    z-index: 1; /* Pastikan overlay di atas background */
+}
+
+/* Gaya Umum untuk Kontainer */
+.container {
+    position: relative;
+    z-index: 2; /* Pastikan kontainer di atas overlay */
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 800px;
+    margin: auto; /* Memastikan kontainer berada di tengah */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animasi fadeIn */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Gaya Judul */
+h1 {
+    color: #d32f2f;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Gaya Paragraf */
+p {
+    color: #0a0101;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Gaya Daftar Rencana */
+.plans-list {
+    list-style-type: none; /* Menghilangkan bullet */
+    padding: 0; /* Menghilangkan padding default */
+    text-align: left; /* Rata kiri untuk daftar */
+    font-size: 1.2em; /* Ukuran font untuk daftar */
+    margin-top: 20px; /* Jarak di atas daftar */
+}
+
+.plans-list li {
+    margin: 10px 0; /* Jarak antar item dalam daftar */
+}
+
+/* Gaya Gambar */
+.distance-image {
+    max-width: 90%; /* Memastikan gambar tidak melebihi lebar kontainer */
+    height: auto; /* Mempertahankan rasio aspek gambar */
+    border: 4px solid #d32f2f;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: zoomIn 1s ease-in-out; /* Menambahkan animasi zoom */
+    margin: 20px 0; /* Menambahkan margin atas dan bawah untuk memberi ruang */
+}
+
+/* Tombol */
+.btn-lanjut {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-lanjut:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* Gaya untuk elemen galeri */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Agar gambar berada di tengah */
+}
+
+.memory-image {
+    width: 30%; /* Ukuran gambar, sesuaikan sesuai kebutuhan */
+    margin: 10px; /* Jarak antar gambar */
+    border-radius: 10px; /* Membuat sudut gambar membulat */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Bayangan untuk efek mendalam */
+}
+
+/* Gaya untuk konten kuis */
+.quiz-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.quiz-question {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.answer-input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* Adjust width based on padding */
+}
+
+.gratitude-message p {
+    color: rgb(151, 14, 14); /* Change the font color to black */
+    font-size: 1.5em; /* Optional: adjust font size as needed */
+    text-align: center; /* Center the text, optional */
+}
+
+h1, p, .gratitude-list li {
+    color: #000; /* Mengatur warna teks menjadi hitam */
+}
+
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #c62828;
+}
+
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+}
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Memories - Page 3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Ujian kasih sayang</h1>
+        <p>Tujuannya untuk menguji apakah kamu benar benar mencintai urang</p>
+
+        <div class="quiz-container">
+            <div class="quiz-question">1. Apa makanan favorit agii?</div>
+            <input type="text" id="answer1" class="answer-input" placeholder="Isi jawaban, Awas salah">
+            <button class="btn-submit" onclick="checkAnswer('answer1', 'sate madura', 1)">Kirim Jawaban</button>
+            <div id="result1" class="result"></div>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-question">2. Di mana kita pergi untuk pertama kalinya?</div>
+            <input type="text" id="answer2" class="answer-input" placeholder="Isi jawaban, Awas salah">
+            <button class="btn-submit" onclick="checkAnswer('answer2', 'pak tisto', 2)">Kirim Jawaban</button>
+            <div id="result2" class="result"></div>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-question">3. Ultah urang kapan seng?</div>
+            <input type="text" id="answer3" class="answer-input" placeholder="Isi jawaban, Awas salah">
+            <button class="btn-submit" onclick="checkAnswer('answer3', '8 januari', 3)">Kirim Jawaban</button>
+            <div id="result3" class="result"></div>
+        </div>
+
+        <a href="romantic-message.html" class="btn-lanjut">Bis tu pencet ini</a>
+    </div>
+
+    <script>
+        // Menyimpan jumlah kesalahan untuk setiap pertanyaan
+        const attempts = { answer1: 0, answer2: 0, answer3: 0 };
+        const correctAnswers = { answer1: 'sate madura', answer2: 'pak tisto', answer3: '8 januari' };
+
+        function checkAnswer(answerId, correctAnswer, questionNumber) {
+            const userAnswer = document.getElementById(answerId).value.toLowerCase();
+            const resultElement = document.getElementById("result" + questionNumber);
+
+            if (userAnswer === correctAnswer) {
+                resultElement.innerHTML = "✅ Jawaban Benar!";
+                resultElement.style.color = "green";
+                attempts[answerId] = 0; // Reset count if answered correctly
+            } else {
+                attempts[answerId]++;
+                resultElement.innerHTML = "❌ Jawaban Salah. Coba lagi!";
+                resultElement.style.color = "red";
+
+                // Tampilkan jawaban yang benar setelah 3 kesalahan
+                if (attempts[answerId] >= 3) {
+                    resultElement.innerHTML = `❌ Jawaban Salah. Jawaban yang benar adalah "${correctAnswer}".`;
+                    resultElement.style.color = "red";
+                    attempts[answerId] = 0; // Reset count after showing correct answer
+                }
+            }
+        }
+    </script>
+</body>
+</html>

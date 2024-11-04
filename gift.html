@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Gift</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background">
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Your Special Gift</h1>
+        <p>This gift is a token of my love for you. I hope you like it!</p>
+        
+        <div class="gift-box">
+            <img src="gift.png" alt="Gift" style="width: 200px;">
+            <p>Click the box to open your gift!</p>
+        </div>
+
+        <a href="index.html" class="btn-lanjut">ini tombol kembali ke awal sayang</a>
+    </div>
+
+    <script>
+        // Add click event to gift box to show message
+        const giftBox = document.querySelector('.gift-box');
+        giftBox.onclick = function() {
+            alert('Congratulations! You have opened your gift! 🎁\n\nHappy Birthday Sayangkuuu, ini hadiah kecil dari urang, membuatkan kamu website kecil"an');
+        };
+    </script>
+</body>
+</html>
